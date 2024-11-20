@@ -22,7 +22,7 @@ import com.example.minggu7.R.color
 
 @Preview(showBackground = true)
 @Composable
-fun SplashView() {
+fun SplashView(modifier : Modifier= Modifier) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(color = colorResource(color.primary)),

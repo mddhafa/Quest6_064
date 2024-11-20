@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.RadioButton
@@ -156,7 +157,9 @@ fun RencanaStudyView(
                     Row (modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ){
-
+                        Button(onClick =  { onBackButtonClicked()}){
+                            Text(text = "Kembali")
+                        }
                     }
                 }
 

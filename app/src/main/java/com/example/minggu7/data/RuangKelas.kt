@@ -1,7 +1,7 @@
 package com.example.minggu7.data
 
 object RuangKelas {
-    val listKelas = listOf(
+    val kelas = listOf(
         "A",
         "B",
         "C",

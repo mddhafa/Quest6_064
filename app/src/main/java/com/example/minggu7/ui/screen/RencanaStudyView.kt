@@ -28,8 +28,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.minggu7.R
+import com.example.minggu7.data.MataKuliah
 import com.example.minggu7.model.RencanaStudy
 import com.example.minggu7.model.mahasiswa
+import com.example.minggu7.ui.widget.DynamicSelectedField
 
 @Composable
 fun RencanaStudyView(
@@ -99,7 +101,15 @@ fun RencanaStudyView(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Light
                     )
-
+                    Spacer(modifier = Modifier.padding(8.dp))
+                    DynamicSelectedField(
+                        selectedValue = chosenDropdown,
+                        options = MataKuliah.options,
+                        label = "Mata Kuliah",
+                        onValueChangedEvent = {
+                            chosenDropdown = it
+                        }
+                    )
                 }
 
             }

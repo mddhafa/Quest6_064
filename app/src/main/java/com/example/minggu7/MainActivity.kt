@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.minggu7.navigation.MahasiswaApp
 import com.example.minggu7.ui.screen.SplashView
 import com.example.minggu7.ui.theme.Minggu7Theme
 
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Minggu7Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SplashView(
+                    MahasiswaApp(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

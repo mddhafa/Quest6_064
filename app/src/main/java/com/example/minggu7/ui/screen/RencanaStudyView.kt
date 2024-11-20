@@ -36,12 +36,12 @@ import com.example.minggu7.R
 import com.example.minggu7.data.MataKuliah
 import com.example.minggu7.data.RuangKelas
 import com.example.minggu7.model.RencanaStudy
-import com.example.minggu7.model.mahasiswa
+import com.example.minggu7.model.Mahasiswa
 import com.example.minggu7.ui.widget.DynamicSelectedField
 
 @Composable
 fun RencanaStudyView(
-    mahasiswa: mahasiswa,
+    mahasiswa: Mahasiswa,
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     onBackButtonClicked : () -> Unit
 ){

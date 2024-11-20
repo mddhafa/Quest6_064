@@ -1,7 +1,7 @@
 package com.example.minggu7.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.minggu7.model.mahasiswa
+import com.example.minggu7.model.Mahasiswa
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -9,12 +9,11 @@ import kotlinx.coroutines.flow.update
 
 class mahasiswaviewmodel : ViewModel() {
 
-    //requ
     private val mahasiswaStateUI =
-        MutableStateFlow(mahasiswa())
+        MutableStateFlow(Mahasiswa())
 
     val mahasiswaUiState:
-            StateFlow<mahasiswa> =
+            StateFlow<Mahasiswa> =
         mahasiswaStateUI.asStateFlow()
 
     fun saveDataMahasiswa(ls: MutableList<String>){

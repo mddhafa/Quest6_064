@@ -45,7 +45,6 @@ import com.example.minggu7.R
 
 @Composable
 fun MahasiswaFormView(
-    modifier: Modifier,
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     onBackButtonClicked : () -> Unit
 

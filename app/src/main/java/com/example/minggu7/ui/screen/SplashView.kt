@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
@@ -20,9 +21,8 @@ import androidx.compose.ui.unit.dp
 import com.example.minggu7.R
 import com.example.minggu7.R.color
 
-@Preview(showBackground = true)
 @Composable
-fun SplashView(modifier : Modifier= Modifier) {
+fun SplashView(onMulaiButton: () -> Unit) {
     Column(modifier = Modifier
         .fillMaxSize()
         .background(color = colorResource(color.primary)),
@@ -35,7 +35,12 @@ fun SplashView(modifier : Modifier= Modifier) {
         )
         Spacer(modifier = Modifier.padding(16.dp))
         Button(
-            onClick = {}
+            onClick = {
+                onMulaiButton()
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(32.dp)
         ) {
             Text("Mulai")
         }

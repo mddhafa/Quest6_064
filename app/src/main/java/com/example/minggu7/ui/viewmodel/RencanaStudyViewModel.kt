@@ -11,12 +11,12 @@ class RencanaStudyViewModel : ViewModel() {
     private val _krsState = MutableStateFlow(RencanaStudy())
     val krsStateUi: StateFlow<RencanaStudy> = _krsState.asStateFlow()
 
-    fun setMataKuliah(mkPilihan: String){
-        _krsState.update { stateMK -> stateMK.copy(mataKuliah = mkPilihan)
+    fun setMataKuliah(MataKuliah: String){
+        _krsState.update { stateMK -> stateMK.copy(mataKuliah = MataKuliah)
         }
     }
-    fun setKelas(kelasPilihan: String) {
-        _krsState.update { stateKelas -> stateKelas.copy(kelas = kelasPilihan) }
+    fun setKelas(RuangKelas: String) {
+        _krsState.update { stateKelas -> stateKelas.copy(kelas = RuangKelas) }
     }
 
     fun saveDataKRS(ls: MutableList<String>){

@@ -110,6 +110,8 @@ fun RencanaStudyView(
                             chosenDropdown = it
                         }
                     )
+                    Spacer(modifier = Modifier.padding(8.dp))
+
                 }
 
             }

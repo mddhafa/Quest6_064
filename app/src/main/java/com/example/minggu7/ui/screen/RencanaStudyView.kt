@@ -160,6 +160,9 @@ fun RencanaStudyView(
                         Button(onClick =  { onBackButtonClicked()}){
                             Text(text = "Kembali")
                         }
+                        Button(onClick =  { onSubmitButtonClicked()}){
+                            Text(text = "Lanjut")
+                        }
                     }
                 }
 

@@ -13,9 +13,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -63,7 +66,7 @@ fun RencanaStudyView(
                 .fillMaxWidth()
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
-        ){
+        ) {
             Image(
                 painter = painterResource(R.drawable.umy),
                 contentDescription = "",
@@ -72,7 +75,7 @@ fun RencanaStudyView(
                     .size(50.dp)
             )
             Spacer(modifier = Modifier.padding(start = 16.dp))
-            Column (modifier = Modifier.weight(1f)){
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = mahasiswa.nama,
                     fontWeight = FontWeight.Bold,
@@ -86,6 +89,14 @@ fun RencanaStudyView(
                     color = Color.White
                 )
             }
+            Box {
+                Icon(
+                    imageVector = Icons.Filled.Notifications,
+                    contentDescription = "",
+                    tint = Color.White
+                )
+            }
+        }
             Box(
                 modifier = Modifier
                     .background(color = Color.White,
@@ -119,6 +130,7 @@ fun RencanaStudyView(
                     Spacer(modifier = Modifier.padding(8.dp))
                     HorizontalDivider()
                     Spacer(modifier = Modifier.padding(8.dp))
+                    Text(text = "Pilih Kelas Belajar", fontWeight = FontWeight.Bold)
                     Text(
                         text = "Silahkan pilih kelas dari mata kuliah yang anda inginkan",
                         fontSize = 12.sp,
@@ -170,4 +182,3 @@ fun RencanaStudyView(
             }
         }
     }
-}

@@ -1,3 +1,11 @@
-![Screenshot (16)](https://github.com/user-attachments/assets/0f693cb2-6e91-4720-b903-f5990742321b)
-![Screenshot (13)](https://github.com/user-attachments/assets/723d539e-93ab-4f31-bbe6-6a504d8761d6)
-![Screenshot (18)](https://github.com/user-attachments/assets/5bfe0b90-23ee-4b36-9de0-c6d54c5a1a7d)
+Halaman Mulai
+![Screenshot_20241122_160245](https://github.com/user-attachments/assets/1cb9b0bf-0b8c-46fd-bf40-8fb839540a65)
+
+Halaman Form Mahasiswa
+![Screenshot_20241122_160313](https://github.com/user-attachments/assets/5a2d081d-fcc8-404b-a818-5db275e87533)
+
+Halaman Rencana Study
+![Screenshot_20241122_160333](https://github.com/user-attachments/assets/78a95b8e-fe26-457e-a353-9ce5cdb1cc4d)
+
+Halaman Tampilan Data
+![Screenshot_20241122_161327](https://github.com/user-attachments/assets/d59332a5-439e-4c34-822d-2455f01ddf40)

@@ -11,10 +11,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.minggu7.model.Mahasiswa
+import com.example.minggu7.model.RencanaStudy
 //import com.example.minggu7.model.mahasiswa
 import com.example.minggu7.ui.screen.MahasiswaFormView
 import com.example.minggu7.ui.screen.RencanaStudyView
 import com.example.minggu7.ui.screen.SplashView
+import com.example.minggu7.ui.screen.TampilanDataView
 //import androidx.navigation.NavHostController
 import com.example.minggu7.ui.viewmodel.RencanaStudyViewModel
 import com.example.minggu7.ui.viewmodel.mahasiswaviewmodel
@@ -30,10 +32,11 @@ enum class Halaman{
 fun MahasiswaApp(
     modifier: Modifier = Modifier,
     mahasiswaviewmodel: mahasiswaviewmodel = viewModel (),
-    krsViewModel: RencanaStudyViewModel = viewModel(),
+    RencanaStudyViewModel: RencanaStudyViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ){
     val mahasiswaUiState = mahasiswaviewmodel.mahasiswaUiState.collectAsState().value
+    val krsStateUi = RencanaStudyViewModel.krsStateUi.collectAsState().value
     NavHost(
         navController = navController,
         startDestination = Halaman.Splash.name,
@@ -60,8 +63,21 @@ fun MahasiswaApp(
         composable(route = Halaman.Matakuliah.name) {
             RencanaStudyView(
                 mahasiswa = mahasiswaUiState,
-                onSubmitButtonClicked = { krsViewModel.saveDataKRS(it)},
+                onSubmitButtonClicked = { RencanaStudyViewModel.saveDataKRS(it)
+                        navController.navigate(Halaman.Tampil.name)
+                                        },
                 onBackButtonClicked = {navController.popBackStack()}
+            )
+        }
+        composable(route = Halaman.Tampil.name) {
+            TampilanDataView(
+                mahasiswa = mahasiswaUiState,
+                RencanaStudy = krsStateUi,
+                onBackButtonClicked = {
+                    navController.navigate(Halaman.Splash.name) {
+                        popUpTo(0) { inclusive = true }
+                    }
+                }
             )
         }
     }

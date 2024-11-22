@@ -59,7 +59,8 @@ fun RencanaStudyView(
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(color = colorResource(R.color.primary))
+            .background(color = colorResource(R.color.primary)
+            )
     ){
         Row(
             modifier = Modifier

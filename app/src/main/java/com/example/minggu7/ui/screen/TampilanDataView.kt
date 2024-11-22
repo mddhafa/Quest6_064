@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
@@ -20,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -44,30 +46,35 @@ fun TampilanDataView(
             ),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Spacer(modifier= Modifier.padding(16.dp))
-        Row (verticalAlignment = Alignment.CenterVertically,)
-        {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Image(
                 painter = painterResource(R.drawable.umy),
                 contentDescription = "",
-                modifier = Modifier.size(45.dp)
+                modifier = Modifier
+                    .clip(shape = CircleShape)
+                    .size(50.dp)
             )
             Spacer(modifier = Modifier.padding(start = 16.dp))
-            Column {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = mahasiswa.nama,
-                    color = Color.Red,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 15.sp,
-                    fontWeight = FontWeight.Bold
+                    color = Color.White
                 )
                 Text(
                     text = mahasiswa.nim,
-                    color = Color.Red,
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.Light
+                    fontWeight = FontWeight.Light,
+                    fontSize = 12.sp,
+                    color = Color.White
                 )
             }
-            Box{
+            Box {
                 Icon(
                     imageVector = Icons.Filled.Notifications,
                     contentDescription = "",

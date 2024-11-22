@@ -8,19 +8,19 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
 class RencanaStudyViewModel : ViewModel() {
-    private val _krsState = MutableStateFlow(RencanaStudy())
-    val krsStateUi: StateFlow<RencanaStudy> = _krsState.asStateFlow()
+    private val krsState = MutableStateFlow(RencanaStudy())
+    val krsStateUi: StateFlow<RencanaStudy> = krsState.asStateFlow()
 
     fun setMataKuliah(MataKuliah: String){
-        _krsState.update { stateMK -> stateMK.copy(mataKuliah = MataKuliah)
+        krsState.update { stateMK -> stateMK.copy(mataKuliah = MataKuliah)
         }
     }
     fun setKelas(RuangKelas: String) {
-        _krsState.update { stateKelas -> stateKelas.copy(kelas = RuangKelas) }
+        krsState.update { stateKelas -> stateKelas.copy(kelas = RuangKelas) }
     }
 
     fun saveDataKRS(ls: MutableList<String>){
-        _krsState.update { status -> status.copy(
+        krsState.update { status -> status.copy(
             mataKuliah = ls[0],
             kelas = ls[1]
         )
